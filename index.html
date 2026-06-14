@@ -285,6 +285,11 @@
       padding-block: clamp(3.5rem, 8vw, 6.5rem)
     }
 
+    /* compensa l'header sticky quando si arriva da link di menu */
+    section[id] {
+      scroll-margin-top: 72px
+    }
+
     .section--alt {
       background: var(--bg-alt);
       background-image: none
@@ -486,7 +491,8 @@
       transform: translateY(-2px)
     }
 
-    .btn--ig {
+    .btn--ig,
+    .btn--fb {
       background: var(--primary);
       color: #fff;
       border-color: var(--primary);
@@ -495,14 +501,16 @@
       gap: .55rem
     }
 
-    .btn--ig:hover {
+    .btn--ig:hover,
+    .btn--fb:hover {
       background: var(--primary-ink);
       border-color: var(--primary-ink);
       color: #fff;
       transform: translateY(-2px)
     }
 
-    .btn--ig svg {
+    .btn--ig svg,
+    .btn--fb svg {
       flex: 0 0 auto
     }
 
@@ -771,12 +779,15 @@
       border-radius: 12px;
       padding: 1rem 1.2rem;
       text-decoration: none;
-      color: var(--ink)
+      color: var(--ink);
+      transition: all 0.2s ease
     }
 
     .file:hover {
-      border-color: var(--polar-3);
-      color: var(--ink)
+      border-color: var(--polar-1);
+      color: var(--ink);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow)
     }
 
     .file__ic {
@@ -807,7 +818,8 @@
       text-transform: uppercase;
       padding: .35rem .6rem;
       border-radius: 999px;
-      white-space: nowrap
+      white-space: nowrap;
+      transition: background 0.2s ease
     }
 
     .badge--soon {
@@ -817,7 +829,11 @@
 
     .badge--ready {
       background: var(--aurora-green);
-      color: #2c3a26
+      color: #ffffff
+    }
+
+    .file:hover .badge--ready {
+      background: var(--polar-1)
     }
 
     .file--soon {
@@ -993,6 +1009,119 @@
     }
 
     /* =========================================================================
+   10 PUNTI — accordion nativo <details>/<summary>
+   ========================================================================= */
+    .punti-list {
+      display: grid;
+      gap: .65rem;
+      margin: 0;
+      padding: 0
+    }
+
+    .punto {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: box-shadow .2s, border-color .2s
+    }
+
+    .punto[open] {
+      border-color: var(--uniurb-blu-chiaro);
+      box-shadow: var(--shadow)
+    }
+
+    .punto summary {
+      display: flex;
+      align-items: baseline;
+      gap: .9rem;
+      padding: 1.05rem 1.2rem;
+      cursor: pointer;
+      list-style: none;
+      user-select: none
+    }
+
+    .punto summary::-webkit-details-marker {
+      display: none
+    }
+
+    .punto summary:hover {
+      background: var(--bg-alt)
+    }
+
+    .punto summary:focus-visible {
+      outline: 3px solid var(--frost-deep);
+      outline-offset: -3px
+    }
+
+    .punto .pn {
+      font-family: var(--mono);
+      font-weight: 700;
+      font-size: .82rem;
+      color: var(--primary);
+      min-width: 1.6rem;
+      flex: 0 0 auto
+    }
+
+    .punto h3 {
+      margin: 0;
+      font-size: clamp(1.05rem, 1vw + .9rem, 1.25rem);
+      line-height: 1.25;
+      flex: 1 1 auto
+    }
+
+    .punto .chev {
+      flex: 0 0 auto;
+      align-self: center;
+      color: var(--muted);
+      transition: transform .25s ease
+    }
+
+    .punto[open] .chev {
+      transform: rotate(90deg);
+      color: var(--accent)
+    }
+
+    .punto__body {
+      padding: .2rem 1.2rem 1.25rem calc(1.2rem + 1.6rem + .9rem)
+    }
+
+    .punto__body .pt {
+      font-style: italic;
+      color: var(--ink-soft);
+      margin: 0 0 .7rem;
+      font-size: 1.02rem
+    }
+
+    .punto__body ul {
+      margin: 0;
+      padding: 0;
+      list-style: none
+    }
+
+    .punto__body li {
+      position: relative;
+      padding-left: 1.15rem;
+      margin-bottom: .45rem;
+      font-size: .98rem;
+      line-height: 1.5
+    }
+
+    .punto__body li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-family: var(--mono)
+    }
+
+    @media (max-width:680px) {
+      .punto__body {
+        padding-left: 1.2rem
+      }
+    }
+
+    /* =========================================================================
    PLACEHOLDER — blocchi "QUI MANCA". Visibili a schermo e cercabili nel codice.
    Cerca la stringa "QUI MANCA" per trovarli tutti.
    ========================================================================= */
@@ -1049,9 +1178,9 @@
         </button>
         <ul class="nav-links" id="navlinks">
           <li><a href="#profilo">Profilo</a></li>
-          <li><a href="#visione">Visione</a></li>
-          <li><a href="#programma">Programma</a></li>
+          <li><a href="#punti">10 punti</a></li>
           <li><a href="#materiali">Materiali</a></li>
+          <li><a href="#visione">Video</a></li>
           <li><a href="#contatti">Contatti</a></li>
         </ul>
       </nav>
@@ -1060,7 +1189,6 @@
 
   <main id="main">
     <span id="top"></span>
-
     <section class="hero">
       <div class="wrap">
         <div class="reveal">
@@ -1073,13 +1201,18 @@
             Carlo Bo</p>
 
           <div class="cta-row">
+            <a class="btn btn--fb" href="https://www.facebook.com/profile.php?id=61578549881375" target="_blank"
+              rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" aria-hidden="true">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg>Facebook</a>
             <a class="btn btn--ig" href="https://www.instagram.com/marcorocchiuniurb/" target="_blank"
               rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="2" aria-hidden="true">
                 <rect x="2" y="2" width="20" height="20" rx="5" />
                 <circle cx="12" cy="12" r="4" />
                 <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-              </svg>Parliamone su Instagram</a>
+              </svg>Instagram</a>
           </div>
         </div>
 
@@ -1143,13 +1276,227 @@
         </aside>
       </div>
     </section>
+    <section class="section section--alt" id="punti">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <span class="kicker">La proposta</span>
+          <h2>10 punti per l'Ateneo</h2>
+          <p>Urbino è a un bivio: calo demografico, telematiche, internazionalizzazione da costruire. A sfide così non
+            si risponde con le promesse, ma con il metodo: decidere sulle evidenze, ascoltare chi fa vivere l'Ateneo,
+            rendere conto dei risultati.</p>
+          <br>
+          <p style="text-align: right; font-family: var(--mono); font-size: 0.85rem; color: var(--muted); font-style: italic; margin-top: 1.5rem; letter-spacing: 0.04em;">Tocca un punto per aprirlo</p>
+        </div>
+
+        <div class="punti-list reveal">
+          <details class="punto" name="dieci-punti" open>
+            <summary><span class="pn">01</span>
+              <h3>Un governo del metodo: dati, ascolto, responsabilità</h3><svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+                <path d="M9 6l6 6-6 6" />
+              </svg></summary>
+            <div class="punto__body">
+              <p class="pt">Le decisioni si prendono sulle evidenze, si costruiscono con la comunità e si misurano sui risultati.</p>
+              <ul>
+                <li>Meno cariche accumulate su poche persone: suddivisione e rotazione degli incarichi.</li>
+                <li>Deleghe con obiettivi misurabili e relazione annuale pubblica; colmare quelle mancanti (enti locali, personale TA, sindacati).</li>
+                <li>Decisioni condivise, con motivazioni comunicate prima e dopo le delibere.</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="punto" name="dieci-punti">
+            <summary><span class="pn">02</span>
+              <h3>La ricerca al centro, in tutte le sue forme</h3><svg class="chev" width="16" height="16"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                aria-hidden="true">
+                <path d="M9 6l6 6-6 6" />
+              </svg></summary>
+            <div class="punto__body">
+              <p class="pt">Una grande università è prima di tutto la sua ricerca: di base e applicata, scientifica e umanistica, senza gerarchie di valore.</p>
+              <ul>
+                <li>Reclutamento trasparente con criteri CoARA e piena dignità a ogni settore.</li>
+                <li>Trattenere i giovani ricercatori su cui l'Ateneo ha già investito.</li>
+                <li>Cluster interdisciplinari, sportello per i bandi europei, figura del Lab Manager.</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="punto" name="dieci-punti">
+            <summary><span class="pn">03</span>
+              <h3>Le persone prima di tutto: carriere, merito, contrasto al precariato</h3><svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+                <path d="M9 6l6 6-6 6" />
+              </svg></summary>
+            <div class="punto__body">
+              <p class="pt">Un Ateneo che vuole essere eccellente comincia dal trattare con giustizia chi ci lavora.</p>
+              <ul>
+                <li>Fine del sottoinquadramento del personale tecnico-amministrativo; carriere e progressioni eque.</li>
+                <li>Stabilizzazione di ricercatori, PTA e CEL; tutela del personale degli appalti.</li>
+                <li>Welfare reale: nido d'Ateneo, lavoro agile, rimborsi per la mobilità tra le sedi.</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="punto" name="dieci-punti">
+            <summary><span class="pn">04</span>
+              <h3>Una didattica che conta davvero</h3><svg class="chev" width="16" height="16" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+                <path d="M9 6l6 6-6 6" />
+              </svg></summary>
+            <div class="punto__body">
+              <p class="pt">Insegnare bene deve valere quanto pubblicare: qualità riconosciuta, studenti al centro.</p>
+              <ul>
+                <li>Riconoscere l'impegno didattico nel percorso e nella valutazione dei docenti.</li>
+                <li>Offerta «blended» di qualità e percorsi per studenti lavoratori, con incentivi ai docenti.</li>
+                <li>Diritto allo studio rafforzato e un Garante per gli Studenti indipendente.</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="punto" name="dieci-punti">
+            <summary><span class="pn">05</span>
+              <h3>Attrarre chi studia: orientamento e offerta formativa</h3><svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+                <path d="M9 6l6 6-6 6" />
+              </svg></summary>
+            <div class="punto__body">
+              <p class="pt">Il calo demografico non si subisce: si affronta con una strategia di reclutamento professionale e con un'offerta costruita sui dati.</p>
+              <ul>
+                <li>Ufficio Orientamento potenziato (fondi, persone) e con sfera d'intervento più ampia.</li>
+                <li>Rilancio nei bacini storici (Sud Italia, versante adriatico) e offerta guidata da analisi di mercato.</li>
+                <li>Promuovere il «Modello Urbino» e la sua bellezza — paesaggio, città, qualità della vita — come ragione per sceglierla.</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="punto" name="dieci-punti">
+            <summary><span class="pn">06</span>
+              <h3>Urbino nel mondo: un'internazionalizzazione vera</h3><svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+                <path d="M9 6l6 6-6 6" />
+              </svg></summary>
+            <div class="punto__body">
+              <p class="pt">Trasformare la debolezza più evidente in un vantaggio competitivo.</p>
+              <ul>
+                <li>Più corsi magistrali in inglese e una struttura dedicata agli accordi internazionali.</li>
+                <li>Borse e accoglienza reale per gli studenti internazionali.</li>
+                <li>Stabilizzare i CEL come leva diretta dell'internazionalizzazione.</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="punto" name="dieci-punti">
+            <summary><span class="pn">07</span>
+              <h3>Meno burocrazia, più tempo per ciò che conta</h3><svg class="chev" width="16" height="16"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                aria-hidden="true">
+                <path d="M9 6l6 6-6 6" />
+              </svg></summary>
+            <div class="punto__body">
+              <p class="pt">Ogni ora sottratta alla burocrazia è un'ora restituita alla ricerca, alla didattica, agli studenti — e l'intelligenza artificiale va usata esattamente per questo, con criterio etico.</p>
+              <ul>
+                <li>Passaggi ridondanti eliminati, responsabili di processo noti, tempi di risposta misurabili.</li>
+                <li>Punti di ascolto accanto al ticketing, per ritrovare il rapporto umano.</li>
+                <li>IA per ricerca, didattica e amministrazione, con formazione sull'uso etico dei dati.</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="punto" name="dieci-punti">
+            <summary><span class="pn">08</span>
+              <h3>Il Patto per Urbino Città Campus</h3><svg class="chev" width="16" height="16" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+                <path d="M9 6l6 6-6 6" />
+              </svg></summary>
+            <div class="punto__body">
+              <p class="pt">Università e città devono decidere insieme: una cabina di regia permanente, servizi reali, una voce pubblica condivisa.</p>
+              <ul>
+                <li>Patto con Comuni, Provincia e Regione tramite una cabina di regia permanente: trasporti (anche con Roma), mobilità, alloggi.</li>
+                <li>Biblioteca civica col Sistema Bibliotecario di Ateneo; comunicazione condivisa con la città e con l'Accademia di Belle Arti e l'ISIA.</li>
+                <li>Restituire solennità alle cerimonie di laurea, costruite col Comune come eventi pubblici della città.</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="punto" name="dieci-punti">
+            <summary><span class="pn">09</span>
+              <h3>Spazi e sostenibilità</h3><svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+                <path d="M9 6l6 6-6 6" />
+              </svg></summary>
+            <div class="punto__body">
+              <p class="pt">La cura dei luoghi è cura delle persone che li abitano: completare, riqualificare, raggiungere la neutralità carbonica.</p>
+              <ul>
+                <li>Completare Campus E. Mattei, San Girolamo e le strutture sportive, nel solco di De Carlo.</li>
+                <li>Accessibilità piena e nuovi spazi per studio e aggregazione.</li>
+                <li>Ateneo carbon neutral entro il 2032.</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="punto" name="dieci-punti">
+            <summary><span class="pn">10</span>
+              <h3>Cultura e terza missione</h3><svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+                <path d="M9 6l6 6-6 6" />
+              </svg></summary>
+            <div class="punto__body">
+              <p class="pt">La vita culturale che fa di Urbino un polo nazionale è parte dell'identità dell'Ateneo — e merita strutture, fondi e un centro d'eccellenza per il patrimonio.</p>
+              <ul>
+                <li>Valorizzare Fondazione Carlo e Marise Bo, Urbino University Press, Sistema Museale di Ateneo e i festival, tra cui Urbino e le città del libro e il Festival del Giornalismo culturale.</li>
+                <li>Un Polo di diagnostica per i beni architettonici e culturali, dentro il Patto col territorio.</li>
+                <li>Fondo per la Terza Missione e Consorzio «Imprese per UniUrb».</li>
+              </ul>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="materiali">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <span class="kicker">Documenti</span>
+          <h2>Materiali da scaricare</h2>
+        </div>
+
+        <ul class="files reveal">
+          <li>
+            <a href="/Programma-Sintesi-Rocchi.pdf" target="_blank" rel="noopener" class="file">
+              <span class="file__ic" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <path d="M14 3v5h5" />
+                  <path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                </svg>
+              </span>
+              <span class="file__txt"><strong>La visione in sintesi</strong></span>
+              <span class="badge badge--ready">Apri/Scarica</span>
+            </a>
+          </li>
+          <li>
+            <a href="/Programma-Completo-Rocchi.pdf" target="_blank" rel="noopener" class="file">
+              <span class="file__ic" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <path d="M14 3v5h5" />
+                  <path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                </svg>
+              </span>
+              <span class="file__txt"><strong>Programma completo</strong></span>
+              <span class="badge badge--ready">Apri/Scarica</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
     <section class="section section--alt" id="visione">
       <div class="wrap">
         <div class="section__head reveal">
           <span class="kicker">La visione per l'Ateneo</span>
           <h2>Direzioni e metodo</h2>
           <p>Sommari di una sola idea di fondo: governare l'Ateneo sui fatti e con la comunità, rendendo conto dei
-            risultati. Il prof. Rocchi li racconta su Instagram.
+            risultati. <b>Il prof. Rocchi li racconta su Instagram</b>
           </p>
         </div>
 
@@ -1227,56 +1574,6 @@
                 →</a></p>
           </article>
         </div>
-      </div>
-    </section>
-
-    <section class="section" id="programma">
-      <div class="wrap">
-        <div class="notice reveal">
-          <span class="kicker">Il programma</span>
-          <h2 style="margin-bottom:.4em">Il programma completo sarà pubblicato qui</h2>
-          <p style="margin-bottom:0">Questo è lo spazio da cui sarà possibile scaricare il programma nella sua
-            forma integrale, appena disponibile.</p>
-          <!--<p class="ph" style="margin-top:1.1em"><b>QUI MANCA (a tua scelta):</b> una riga sulla tempistica/modalità
-            (es. «in vista delle votazioni del 1°–2 ottobre 2026») — solo se e quando ritieni opportuno renderla
-            pubblica.</p>-->
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--alt" id="materiali">
-      <div class="wrap">
-        <div class="section__head reveal">
-          <span class="kicker">Documenti</span>
-          <h2>Materiali da scaricare</h2>
-        </div>
-
-        <ul class="files reveal">
-          <li>
-            <span class="file file--soon">
-              <span class="file__ic" aria-hidden="true">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
-                  <path d="M14 3v5h5" />
-                  <path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                </svg>
-              </span>
-              <span class="file__txt"><strong>La visione in sintesi</strong></span>
-              <span class="badge badge--soon">A breve</span>
-            </span>
-          </li>
-          <li>
-            <span class="file file--soon">
-              <span class="file__ic" aria-hidden="true">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
-                  <path d="M14 3v5h5" />
-                  <path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                </svg>
-              </span>
-              <span class="file__txt"><strong>Programma completo</strong></span>
-              <span class="badge badge--soon">A breve</span>
-            </span>
-          </li>
-        </ul>
       </div>
     </section>
 

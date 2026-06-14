@@ -1,4 +1,7 @@
 User-agent: *
+Disallow: /Materiali-e-bozze/
+Allow: /Programma-Sintesi-Rocchi.pdf
+Allow: /Programma-Completo-Rocchi.pdf
 Allow: /
 
 Sitemap: https://marco-rocchi.it/sitemap.xml
