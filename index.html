@@ -492,7 +492,8 @@
     }
 
     .btn--ig,
-    .btn--fb {
+    .btn--fb,
+    .btn--in {
       background: var(--primary);
       color: #fff;
       border-color: var(--primary);
@@ -502,7 +503,8 @@
     }
 
     .btn--ig:hover,
-    .btn--fb:hover {
+    .btn--fb:hover,
+    .btn--in:hover {
       background: var(--primary-ink);
       border-color: var(--primary-ink);
       color: #fff;
@@ -510,7 +512,8 @@
     }
 
     .btn--ig svg,
-    .btn--fb svg {
+    .btn--fb svg,
+    .btn--in svg {
       flex: 0 0 auto
     }
 
@@ -903,27 +906,19 @@
       color: var(--ink);
       border: 1px solid var(--line);
       border-radius: 999px;
-      padding: .5rem .9rem
+      padding: .5rem .9rem;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center
     }
 
     .socials a:hover {
-      border-color: var(--polar-0);
-      color: var(--ink)
-    }
-
-    .socials .ig {
-      border-color: var(--primary);
-      color: var(--primary-ink);
-      font-weight: 600
-    }
-
-    .socials .ig:hover {
       background: var(--primary);
       color: #fff;
       border-color: var(--primary)
     }
 
-    .socials .ig svg {
+    .socials a svg {
       vertical-align: -2px;
       margin-right: .35rem
     }
@@ -1210,6 +1205,13 @@
                 <circle cx="12" cy="12" r="4" />
                 <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
               </svg>Instagram</a>
+            <a class="btn btn--in" href="https://www.linkedin.com/in/marco-rocchi-60246026/" target="_blank"
+              rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" aria-hidden="true">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>LinkedIn</a>
           </div>
         </div>
 
@@ -1673,15 +1675,20 @@
           <!--<h2>Scrivi al prof. Marco Rocchi</h2>
           <a class="mailto" href="mailto:INDIRIZZO@DOMINIO.it">INDIRIZZO@DOMINIO.it</a>-->
           <div class="socials">
-            <a class="ig" href="https://www.instagram.com/marcorocchiuniurb/" target="_blank" rel="noopener"><svg
-                width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                aria-hidden="true">
+            <a href="https://www.facebook.com/profile.php?id=61578549881375" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg>Facebook</a>
+            <a href="https://www.instagram.com/marcorocchiuniurb/" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <rect x="2" y="2" width="20" height="20" rx="5" />
                 <circle cx="12" cy="12" r="4" />
                 <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
               </svg>Instagram</a>
+            <a href="https://www.linkedin.com/in/marco-rocchi-60246026/" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>LinkedIn</a>
             <a href="https://www.uniurb.it/persone/marco-rocchi" target="_blank" rel="noopener">UniUrb</a>
-            <a href="https://www.researchgate.net/profile/Marco-Rocchi" target="_blank" rel="noopener">ResearchGate</a>
           </div>
         </div>
         <div class="reveal">
