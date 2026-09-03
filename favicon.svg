@@ -1,3 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
   <circle cx="256" cy="256" r="256" fill="#294973" />
+  <text x="256" y="343" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="900"
+    font-size="240" letter-spacing="-10" fill="#ffffff">MR</text>
 </svg>

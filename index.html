@@ -8,18 +8,18 @@
 
   <title>Marco Rocchi — Statistica medica, Università di Urbino Carlo Bo</title>
   <meta name="description"
-    content="Marco Rocchi, professore di Statistica medica e direttore del Dipartimento di Scienze Biomolecolari (DISB) all'Università di Urbino Carlo Bo. Profilo e visione.">
+    content="Marco Rocchi, professore di Statistica medica, candidato Rettore all'Università di Urbino Carlo Bo. Profilo, visione e un caffè virtuale per parlarne insieme.">
   <meta name="author" content="Marco Rocchi">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://marco-rocchi.it/">
-  <meta name="theme-color" content="#2E3440">
+  <meta name="theme-color" content="#294973">
 
   <meta property="og:type" content="profile">
   <meta property="og:locale" content="it_IT">
   <meta property="og:site_name" content="Marco Rocchi">
   <meta property="og:title" content="Marco Rocchi — Statistica medica, Università di Urbino Carlo Bo">
   <meta property="og:description"
-    content="Profilo, visione per l'Ateneo e materiali. Statistica medica, metodo, governo dell'università fondato sui dati.">
+    content="Profilo, visione per l'Ateneo e materiali. Statistica medica, metodo, dati — e un caffè virtuale per parlarne direttamente col prof. Rocchi.">
   <meta property="og:url" content="https://marco-rocchi.it/">
   <meta property="og:image" content="https://marco-rocchi.it/og-image.jpg">
   <meta property="og:image:width" content="1200">
@@ -30,7 +30,8 @@
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Marco Rocchi — Statistica medica, Università di Urbino Carlo Bo">
-  <meta name="twitter:description" content="Profilo, visione per l'Ateneo e materiali.">
+  <meta name="twitter:description"
+    content="Profilo e visione per l'Ateneo. Prenota un caffè virtuale per parlarne direttamente col prof. Rocchi.">
   <meta name="twitter:image" content="https://marco-rocchi.it/og-image.jpg">
 
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -75,7 +76,7 @@
       "familyName": "Rocchi",
       "jobTitle": "Professore ordinario di Statistica medica",
       "description": "Professore ordinario di Statistica medica e direttore del Dipartimento di Scienze Biomolecolari dell'Università di Urbino Carlo Bo. Biostatistico, laureato in Scienze Biologiche e in Filosofia.",
-      "image": "https://marco-rocchi.it/Marco-Rocchi.png",
+      "image": "https://marco-rocchi.it/Marco-Rocchi.webp",
       "url": "https://marco-rocchi.it/",
       "birthDate": "1962",
       "birthPlace": { "@type": "Place", "name": "Milano, Italia" },
@@ -84,7 +85,7 @@
       "knowsAbout": [
         "Statistica medica",
         "Biostatistica",
-        "logia della ricerca clinica",
+        "Metodologia della ricerca clinica",
         "Epidemiologia",
         "Storia e filosofia della scienza"
       ],
@@ -388,7 +389,7 @@
       display: block
     }
 
-    @media (max-width:760px) {
+    @media (max-width:880px) {
       .nav-toggle {
         display: inline-flex
       }
@@ -841,6 +842,72 @@
       cursor: default
     }
 
+    /* =========================================================================
+   CAFFÈ VIRTUALE (CTA prenotazione)
+   ========================================================================= */
+    .section--dark {
+      background: var(--polar-0);
+      background-image: none;
+      color: var(--snow-0);
+    }
+
+    .section--dark h2 {
+      color: #fff;
+    }
+
+    .section--dark .kicker {
+      color: var(--snow-0);
+    }
+
+    .section--dark .lead {
+      color: var(--frost-cyan);
+    }
+
+    .coffee-features {
+      list-style: none;
+      margin: 1.6rem 0 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: .6rem 1.6rem;
+      font-family: var(--mono);
+      font-size: .82rem;
+      letter-spacing: .02em;
+    }
+
+    .coffee-features li {
+      display: flex;
+      align-items: center;
+      gap: .5rem
+    }
+
+    .coffee-features svg {
+      flex: 0 0 auto;
+      color: var(--frost-blue)
+    }
+
+    .btn--coffee {
+      background: #fff;
+      color: var(--polar-0);
+      border-color: #fff;
+      font-size: .92rem;
+      padding: 1rem 1.5rem
+    }
+
+    .btn--coffee:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+      transform: translateY(-2px)
+    }
+
+    .coffee-note {
+      margin-top: 1.2rem;
+      font-size: .8rem;
+      color: rgba(255, 255, 255, .75);
+      max-width: 48ch
+    }
+
     /* press */
     .press-list {
       list-style: none;
@@ -1171,6 +1238,7 @@
         <ul class="nav-links" id="navlinks">
           <li><a href="#profilo">Profilo</a></li>
           <li><a href="#punti">10 punti</a></li>
+          <li><a href="#caffe">Caffè virtuale</a></li>
           <li><a href="#materiali">Materiali</a></li>
           <li><a href="#visione">Video</a></li>
           <li><a href="#stampa">Stampa</a></li>
@@ -1187,7 +1255,7 @@
         <div class="reveal">
           <span class="kicker">Università degli Studi di Urbino Carlo Bo</span>
           <h1>Marco Rocchi</h1>
-          <p class="role">Professore ordinario di Statistica medica.<br>Una guida per l'Ateneo fondata sul e sui
+          <p class="role">Professore ordinario di Statistica medica.<br>Una guida per l'Ateneo fondata sul metodo e sui
             dati.</p>
 
           <p><i>«L'università è una comunità di studiosi e di studenti. Il dialogo è la base della democrazia.»</i><br>
@@ -1218,7 +1286,7 @@
 
         <div class="reveal">
 
-          <div class="portrait"><img src="Marco-Rocchi.png" width="800" height="800" alt="Marco Bruno Luigi Rocchi">
+          <div class="portrait"><img src="Marco-Rocchi.webp" width="1000" height="1000" alt="Marco Bruno Luigi Rocchi">
           </div>
 
         </div>
@@ -1261,7 +1329,7 @@
           <p>Accanto alla scienza, una formazione umanistica mai accantonata. Laureato anche in Filosofia, ha studiato
             il rapporto tra scienza e pensiero — il newtonianesimo e l'eredità dell'illuminismo — in saggi e volumi
             pubblicati con editori come Mimesis. È una doppia cittadinanza, scientifica e filosofica, che orienta il suo
-            modo di intendere l'Università: un luogo dove il rigore del e la cultura non sono mondi separati.</p>
+            modo di intendere l'Università: un luogo dove il rigore del metodo e la cultura non sono mondi separati.</p>
         </div>
         <aside class="aside-card reveal" aria-label="Profili accademici">
           <h3>Profili e ricerca</h3>
@@ -1284,7 +1352,7 @@
           <span class="kicker">La proposta</span>
           <h2>10 punti per l'Ateneo</h2>
           <p>Urbino è a un bivio: calo demografico, telematiche, internazionalizzazione da costruire. A sfide così non
-            si risponde con le promesse, ma con il : decidere sulle evidenze, ascoltare chi fa vivere l'Ateneo,
+            si risponde con le promesse, ma con il metodo: decidere sulle evidenze, ascoltare chi fa vivere l'Ateneo,
             rendere conto dei risultati.</p>
           <br>
           <p
@@ -1295,7 +1363,7 @@
         <div class="punti-list reveal">
           <details class="punto" name="dieci-punti" open>
             <summary><span class="pn">01</span>
-              <h3>Un governo del : dati, ascolto, responsabilità</h3><svg class="chev" width="16" height="16"
+              <h3>Un governo del metodo: dati, ascolto, responsabilità</h3><svg class="chev" width="16" height="16"
                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
                 aria-hidden="true">
                 <path d="M9 6l6 6-6 6" />
@@ -1487,6 +1555,52 @@
       </div>
     </section>
 
+    <section class="section section--dark" id="caffe">
+      <div class="wrap">
+        <div class="section__head reveal" style="max-width:640px">
+          <span class="kicker">Parliamone di persona</span>
+          <h2>Un caffè virtuale con Marco Rocchi</h2>
+          <p class="lead"><i>«Il futuro dell'Università di Urbino si costruisce insieme, partendo dall'ascolto e dal
+              confronto libero.»</i></p>
+          <p>Il prof. Rocchi invita chiunque lo desideri — studenti, docenti, personale tecnico-amministrativo,
+            cittadini — a un incontro individuale di 30 minuti su Google Meet, per parlare liberamente di idee,
+            criticità e soluzioni per l'Ateneo. Senza formalismi, in totale riservatezza, dal proprio smartphone o
+            computer. Nessun impegno, nessuna richiesta di voto: solo dialogo sincero.</p>
+
+          <ul class="coffee-features">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M12 7v5l3 3" />
+              </svg>30 minuti, a quattr'occhi</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="6" width="14" height="12" rx="2" />
+                <path d="M16 10l6-3v10l-6-3" />
+              </svg>Su Google Meet, da smartphone o PC</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="4" y="11" width="16" height="9" rx="2" />
+                <path d="M8 11V7a4 4 0 0 1 8 0v4" />
+              </svg>Colloquio privato e informale</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path
+                  d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+              </svg>Nessun impegno, solo dialogo sincero</li>
+          </ul>
+
+          <div class="cta-row">
+            <a class="btn btn--coffee"
+              href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0BZSLsvlrZBtE3xEIW2Pf1Qno8ztqq0KW73b6pPJj3vKysEibuakUN3UsuM33qxL2HSdG1u31m"
+              target="_blank" rel="noopener">Prenota il tuo caffè virtuale →</a>
+          </div>
+          <p class="coffee-note">La prenotazione avviene tramite Google Calendar: inserendo i tuoi dati acconsenti al
+            trattamento da parte di Google per la gestione dell'appuntamento.</p>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="materiali">
       <div class="wrap">
         <div class="section__head reveal">
@@ -1527,12 +1641,23 @@
       <div class="wrap">
         <div class="section__head reveal">
           <span class="kicker">La visione per l'Ateneo</span>
-          <h2>Direzioni e </h2>
+          <h2>Direzioni e metodo</h2>
           <p>Sommari di una sola idea di fondo: governare l'Ateneo sui fatti e con la comunità, rendendo conto dei
             risultati. <b>Il prof. Rocchi li racconta su Instagram</b>
           </p>
         </div>
         <div class="pillars">
+          <article class="pillar reveal">
+            <span class="pillar__n">18</span>
+            <h3>Un caffè virtuale con Marco Rocchi</h3>
+            <p class="pillar-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+              </svg><a href="https://www.instagram.com/reels/Dc0QcuHICHz/" target="_blank" rel="noopener">Apri il reel
+                →</a></p>
+          </article>
           <article class="pillar reveal">
             <span class="pillar__n">17</span>
             <h3>Intervista a TeleRomagna 02</h3>
@@ -1751,17 +1876,17 @@
               target="_blank" rel="noopener">Nuovo rettore, in campo anche Rocchi<span class="src">Corriere Adriatico —
                 giugno 2026</span></a></li>
           <li><a href="https://www.ilrestodelcarlino.it/fano/cronaca/passioni-al-bancone-il-4c562a9f" target="_blank"
-              rel="noopener">Passioni al bancone. Il Caffè delle Scienze festeggia 102 anni<span class="src">il Resto
+              rel="noopener">Passioni al bancone. Il Caffè delle Scienze festeggia 102 anni<span class="src">Il Resto
                 del Carlino — dicembre 2025</span></a></li>
           <li><a href="https://www.ilrestodelcarlino.it/pesaro/cronaca/rocchi-la-nostra-universita-rimane-bdde4235"
-              target="_blank" rel="noopener">Rocchi: "La nostra università rimane attrattiva"<span class="src">il Resto
+              target="_blank" rel="noopener">Rocchi: "La nostra università rimane attrattiva"<span class="src">Il Resto
                 del Carlino — novembre 2025</span></a></li>
           <li><a
               href="https://www.viverepesaro.it/2025/10/08/il-fuoco-che-trasforma-e-forgia-lalchimia-incontra-la-ceramica-nella-chiesa-del-nome-di-dio/154991/"
               target="_blank" rel="noopener">L'alchimia incontra la ceramica nella Chiesa del Nome di Dio'<span
                 class="src">Vivere Pesaro — ottobre 2025</span></a></li>
           <li><a href="https://www.ilrestodelcarlino.it/ancona/cronaca/la-magia-di-popsophia-abracadabra-eeaced55"
-              target="_blank" rel="noopener">La magia di Popsophia "Abracadabra"<span class="src">il Resto del Carlino —
+              target="_blank" rel="noopener">La magia di Popsophia "Abracadabra"<span class="src">Il Resto del Carlino —
                 maggio 2025</span></a></li>
           <li><a
               href="https://uniamo.uniurb.it/linee-guida-iss-il-contributo-di-uniurb-alla-direttiva-nazionale-sulla-valutazione-del-danno-alla-persona/"
@@ -1769,41 +1894,41 @@
               del danno alla persona<span class="src">#Uniamo, Università di Urbino — 2025</span></a></li>
           <li><a
               href="https://www.ilrestodelcarlino.it/pesaro/cronaca/scienze-motorie-e-carcere-22-anni-di-collaborazione-acb4fdc3"
-              target="_blank" rel="noopener">Scienze motorie e carcere, 22 anni di collaborazione<span class="src">il
+              target="_blank" rel="noopener">Scienze motorie e carcere, 22 anni di collaborazione<span class="src">Il
                 Resto del Carlino — novembre 2024</span></a></li>
           <li><a
               href="https://ristretti.org/fossombrone-pu-esercizio-fisico-in-carcere-luniversita-di-urbino-fa-la-storia"
               target="_blank" rel="noopener">Esercizio fisico in carcere, l'Università di Urbino fa la storia<span
-                class="src">il Resto del Carlino — novembre 2024</span></a></li>
+                class="src">Il Resto del Carlino — novembre 2024</span></a></li>
           <li><a href="https://www.ilrestodelcarlino.it/pesaro/cronaca/luniversita-sfida-le-telematiche-faa247b3"
               target="_blank" rel="noopener">«L'Università sfida le telematiche»: dati sull'istruzione e sul
-              finanziamento degli atenei<span class="src">il Resto del Carlino — ottobre 2024</span></a></li>
+              finanziamento degli atenei<span class="src">Il Resto del Carlino — ottobre 2024</span></a></li>
           <li><a
               href="https://www.ilrestodelcarlino.it/pesaro/cronaca/anche-il-prof-rocchi-diventa-membro-di-urbino-capoluogo-dbaad834"
-              target="_blank" rel="noopener">Anche il prof Rocchi diventa membro di Urbino Capoluogo<span class="src">il
+              target="_blank" rel="noopener">Anche il prof Rocchi diventa membro di Urbino Capoluogo<span class="src">Il
                 Resto del Carlino — agosto 2024</span></a></li>
           <li><a href="https://www.ilrestodelcarlino.it/pesaro/cronaca/ora-serve-un-patto-per-cec14ff3" target="_blank"
-              rel="noopener">Ora serve un patto per Uniurb che coinvolga enti e territori<span class="src">il Resto del
+              rel="noopener">Ora serve un patto per Uniurb che coinvolga enti e territori<span class="src">Il Resto del
                 Carlino — maggio 2024</span></a></li>
           <li><a
               href="https://www.ilrestodelcarlino.it/pesaro/cronaca/tante-iniziative-per-la-giornata-della-memoria-la-tragedia-della-shoah-un-crimine-senza-ragioni-ymqw2l8e"
               target="_blank" rel="noopener">Tante iniziative per la Giornata della Memoria La tragedia della Shoah, un
-              crimine senza ragioni<span class="src">il Resto del Carlino — gennaio 2023</span></a></li>
+              crimine senza ragioni<span class="src">Il Resto del Carlino — gennaio 2023</span></a></li>
           <li><a href="https://www.ilrestodelcarlino.it/pesaro/cronaca/il-commosso-ricordo-di-andrea-tontini-6257f2bf"
-              target="_blank" rel="noopener">Il commosso ricordo di Andrea Tontini<span class="src">il Resto del Carlino
+              target="_blank" rel="noopener">Il commosso ricordo di Andrea Tontini<span class="src">Il Resto del Carlino
                 — novembre 2022</span></a></li>
           <li><a
               href="https://www.ilrestodelcarlino.it/pesaro/cronaca/carcinoma-polmone-nuove-ricerche-anche-con-marco-rocchi-fb2fb60c"
               target="_blank" rel="noopener">Carcinoma polmone: nuove ricerche anche con Marco Rocchi<span
-                class="src">il Resto del Carlino — settembre 2022</span></a></li>
+                class="src">Il Resto del Carlino — settembre 2022</span></a></li>
           <li><a
               href="https://www.ilrestodelcarlino.it/pesaro/cronaca/svelato-lidentikit-del-microbiota-nazionale-cf52c93b"
-              target="_blank" rel="noopener">Svelato l'identikit del microbiota nazionale<span class="src">il Resto del
+              target="_blank" rel="noopener">Svelato l'identikit del microbiota nazionale<span class="src">Il Resto del
                 Carlino — marzo 2022</span></a></li>
           <li><a
               href="https://www.ilrestodelcarlino.it/pesaro/cronaca/al-di-la-del-fiume-e-tra-gli-alberi-su-rai-5-una-urbino-vivacissima-9b69d9e9"
               target="_blank" rel="noopener">“Al di là del fiume e tra gli alberi“ su Rai 5 una Urbino vivacissima<span
-                class="src">il Resto del Carlino — ottobre 2021</span></a></li>
+                class="src">Il Resto del Carlino — ottobre 2021</span></a></li>
           <li><a href="https://uniamo.uniurb.it/modelli-matematici-urbino-covid19/" target="_blank"
               rel="noopener">Modelli matematici e biostatistica: leggere un'epidemia attraverso i numeri<span
                 class="src">#Uniamo, Università di Urbino — aprile 2020</span></a></li>
