@@ -1219,6 +1219,71 @@
         transform: none
       }
     }
+
+    /* =========================================================================
+   VIDEO PER TEMA e BANNER PRIMO TURNO
+   ========================================================================= */
+    .vgroup + .vgroup {
+      margin-top: clamp(2rem, 5vw, 3rem)
+    }
+
+    .vgroup__head {
+      border-left: 3px solid var(--primary);
+      padding-left: 1rem;
+      margin-bottom: 1.2rem
+    }
+
+    .vgroup__head h3 {
+      margin: 0;
+      font-size: 1.5rem
+    }
+
+    .vgroup__head p {
+      margin: .3rem 0 0;
+      color: var(--muted)
+    }
+
+    .vgroup .pillars {
+      grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr))
+    }
+
+    .vgroup .pillar {
+      padding: 1.2rem 1.3rem;
+      display: flex;
+      flex-direction: column
+    }
+
+    .vgroup .pillar .pillar-ig {
+      margin-top: auto
+    }
+
+    .pillar h4 {
+      margin: 0 0 .8rem;
+      font-size: 1.1rem;
+      line-height: 1.3
+    }
+
+    .vote-banner {
+      background: var(--uniurb-blu-scuro);
+      color: #fff;
+      padding: clamp(1.4rem, 4vw, 2.2rem) 0
+    }
+
+    .vote-banner .kicker {
+      color: var(--frost-cyan)
+    }
+
+    .vote-banner__msg {
+      font-size: clamp(1.1rem, 2.4vw, 1.4rem);
+      margin: .5rem 0 1.1rem;
+      max-width: 60ch
+    }
+
+    .btn--light {
+      background: #fff;
+      color: var(--uniurb-blu-scuro);
+      border-color: #fff
+    }
   </style>
 </head>
 
@@ -1250,6 +1315,17 @@
 
   <main id="main">
     <span id="top"></span>
+    <section class="vote-banner" aria-label="Dopo il primo turno">
+      <div class="wrap">
+        <span class="kicker">Elezione del Rettore · primo turno, 2 ottobre 2026</span>
+        <p class="vote-banner__msg">Messaggio del prof. Rocchi dopo il primo turno</p>
+        <div class="cta-row">
+          <a class="btn btn--light" href="https://www.instagram.com/reel/DeAG7DII99H/" target="_blank"
+            rel="noopener">Guarda il video →</a>
+        </div>
+      </div>
+    </section>
+
     <section class="hero">
       <div class="wrap">
         <div class="reveal">
@@ -1641,230 +1717,236 @@
       <div class="wrap">
         <div class="section__head reveal">
           <span class="kicker">La visione per l'Ateneo</span>
-          <h2>Direzioni e metodo</h2>
-          <p>Sommari di una sola idea di fondo: governare l'Ateneo sui fatti e con la comunità, rendendo conto dei
-            risultati. <b>Il prof. Rocchi li racconta su Instagram</b>
-          </p>
+          <h2>La visione, in video</h2>
+          <p>Un'idea di fondo: governare l'Ateneo sui fatti e con la comunità, rendendo conto dei risultati.
+            <b>Il prof. Rocchi la racconta su Instagram</b>, tema per tema.</p>
         </div>
-        <div class="pillars">
-          <article class="pillar reveal">
-            <span class="pillar__n">19</span>
-            <h3>Università e Città: guardiamo insieme al futuro di Urbino</h3>
-            <p class="pillar-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        <div class="vgroup reveal">
+          <div class="vgroup__head">
+            <h3>Gli ultimi video</h3>
+            <p>In vista del ballottaggio</p>
+          </div>
+          <div class="pillars">
+            <article class="pillar">
+              <h4>Patto con Berta Martini</h4>
+              <p class="pillar-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="2" aria-hidden="true">
                 <rect x="2" y="2" width="20" height="20" rx="5" />
                 <circle cx="12" cy="12" r="4" />
                 <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-              </svg><a href="https://www.instagram.com/reel/DdLk0Leoo1J/" target="_blank" rel="noopener">Apri il reel
-                →</a></p>
-          </article>
-          <article class="pillar reveal">
-            <span class="pillar__n">18</span>
-            <h3>Un caffè virtuale con Marco Rocchi</h3>
-            <p class="pillar-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              </svg><a href="https://www.instagram.com/reel/DeAG7DII99H/" target="_blank" rel="noopener">Guarda il video →</a></p>
+            </article>
+            <article class="pillar">
+              <h4>Al ballottaggio per vincere</h4>
+              <p class="pillar-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="2" aria-hidden="true">
                 <rect x="2" y="2" width="20" height="20" rx="5" />
                 <circle cx="12" cy="12" r="4" />
                 <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-              </svg><a href="https://www.instagram.com/reels/Dc0QcuHICHz/" target="_blank" rel="noopener">Apri il reel
-                →</a></p>
-          </article>
-          <article class="pillar reveal">
-            <span class="pillar__n">17</span>
-            <h3>Intervista a TeleRomagna 02</h3>
-            <p class="pillar-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              </svg><a href="https://www.instagram.com/reel/Dd_nfWgoJm3/" target="_blank" rel="noopener">Guarda il video →</a></p>
+            </article>
+            <article class="pillar">
+              <h4>Un voto libero è forte</h4>
+              <p class="pillar-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="2" aria-hidden="true">
                 <rect x="2" y="2" width="20" height="20" rx="5" />
                 <circle cx="12" cy="12" r="4" />
                 <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-              </svg><a href="https://www.instagram.com/reels/Dcx2tL0ofIz/" target="_blank" rel="noopener">Apri il reel
-                →</a></p>
-          </article>
-          <article class="pillar reveal">
-            <span class="pillar__n">16</span>
-            <h3>Intervista a TeleRomagna 01</h3>
-            <p class="pillar-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              </svg><a href="https://www.instagram.com/reel/Dd3XQLLIMox/" target="_blank" rel="noopener">Guarda il video →</a></p>
+            </article>
+          </div>
+        </div>
+        <div class="vgroup reveal">
+          <div class="vgroup__head">
+            <h3>Persone</h3>
+            <p>Chi studia e chi lavora in Ateneo: diritti, opportunità, carriere.</p>
+          </div>
+          <div class="pillars">
+            <article class="pillar">
+              <h4>Studenti a UniUrb</h4>
+              <p class="pillar-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="2" aria-hidden="true">
                 <rect x="2" y="2" width="20" height="20" rx="5" />
                 <circle cx="12" cy="12" r="4" />
                 <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-              </svg><a href="https://www.instagram.com/reels/DcsuWkwoYvQ/" target="_blank" rel="noopener">Apri il reel
-                →</a></p>
-          </article>
-          <article class="pillar reveal">
-            <span class="pillar__n">15</span>
-            <h3>Carlo Bo, 25 anni dopo</h3>
-            <p class="pillar-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              </svg><a href="https://www.instagram.com/reel/DZNDQrgIIqh/" target="_blank" rel="noopener">Guarda il video →</a></p>
+            </article>
+            <article class="pillar">
+              <h4>Reclutamento e avanzamenti di carriera</h4>
+              <p class="pillar-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="2" aria-hidden="true">
                 <rect x="2" y="2" width="20" height="20" rx="5" />
                 <circle cx="12" cy="12" r="4" />
                 <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-              </svg><a href="https://www.instagram.com/reels/DbC4BQZo4dT/" target="_blank" rel="noopener">Apri il reel
-                →</a></p>
-          </article>
-          <article class="pillar reveal">
-            <span class="pillar__n">14</span>
-            <h3>"Metodo" per UniUrb</h3>
-            <p class="pillar-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              </svg><a href="https://www.instagram.com/reel/DZo79dfoRf1/" target="_blank" rel="noopener">Guarda il video →</a></p>
+            </article>
+            <article class="pillar">
+              <h4>Il patto per UniUrb</h4>
+              <p class="pillar-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="2" aria-hidden="true">
                 <rect x="2" y="2" width="20" height="20" rx="5" />
                 <circle cx="12" cy="12" r="4" />
                 <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-              </svg><a href="https://www.instagram.com/reels/DakKUHJIHE4/" target="_blank" rel="noopener">Apri il reel
-                →</a></p>
-          </article>
-          <article class="pillar reveal">
-            <span class="pillar__n">13</span>
-            <h3>Sito web UniUrb</h3>
-            <p class="pillar-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              </svg><a href="https://www.instagram.com/reel/DZJ9C-9oTlk/" target="_blank" rel="noopener">Guarda il video →</a></p>
+            </article>
+          </div>
+        </div>
+        <div class="vgroup reveal">
+          <div class="vgroup__head">
+            <h3>Governo dell'Ateneo</h3>
+            <p>Decidere sui fatti, rendere conto dei risultati.</p>
+          </div>
+          <div class="pillars">
+            <article class="pillar">
+              <h4>Governance</h4>
+              <p class="pillar-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="2" aria-hidden="true">
                 <rect x="2" y="2" width="20" height="20" rx="5" />
                 <circle cx="12" cy="12" r="4" />
                 <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-              </svg><a href="https://www.instagram.com/reels/DacRtGKIvbv/" target="_blank" rel="noopener">Apri il reel
-                →</a></p>
-          </article>
-          <article class="pillar reveal">
-            <span class="pillar__n">12</span>
-            <h3>Orizzonti per UniUrb</h3>
-            <p class="pillar-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              </svg><a href="https://www.instagram.com/reel/DZUZN-Ro2c0/" target="_blank" rel="noopener">Guarda il video →</a></p>
+            </article>
+            <article class="pillar">
+              <h4>“Metodo” per UniUrb</h4>
+              <p class="pillar-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="2" aria-hidden="true">
                 <rect x="2" y="2" width="20" height="20" rx="5" />
                 <circle cx="12" cy="12" r="4" />
                 <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-              </svg><a href="https://www.instagram.com/reels/DZ7VknBoJZm/" target="_blank" rel="noopener">Apri il reel
-                →</a></p>
-          </article>
-          <article class="pillar reveal">
-            <span class="pillar__n">11</span>
-            <h3>Comunicazione e visibilità territoriale</h3>
-            <p class="pillar-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              </svg><a href="https://www.instagram.com/reel/DakKUHJIHE4/" target="_blank" rel="noopener">Guarda il video →</a></p>
+            </article>
+            <article class="pillar">
+              <h4>Candidatura a Rettore e programma</h4>
+              <p class="pillar-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="2" aria-hidden="true">
                 <rect x="2" y="2" width="20" height="20" rx="5" />
                 <circle cx="12" cy="12" r="4" />
                 <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-              </svg><a href="https://www.instagram.com/reels/DZ1tGU0om9C/" target="_blank" rel="noopener">Apri il reel
-                →</a></p>
-          </article>
-          <article class="pillar reveal">
-            <span class="pillar__n">10</span>
-            <h3>Comunicare e valorizzare i successi</h3>
-            <p class="pillar-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              </svg><a href="https://www.instagram.com/reel/DZrZbnTIuYR/" target="_blank" rel="noopener">Guarda il video →</a></p>
+            </article>
+            <article class="pillar">
+              <h4>Pillole per UniUrb</h4>
+              <p class="pillar-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="2" aria-hidden="true">
                 <rect x="2" y="2" width="20" height="20" rx="5" />
                 <circle cx="12" cy="12" r="4" />
                 <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-              </svg><a href="https://www.instagram.com/reels/DZzVLxso_qJ/" target="_blank" rel="noopener">Apri il reel
-                →</a></p>
-          </article>
-          <article class="pillar reveal">
-            <span class="pillar__n">09</span>
-            <h3>Candidatura a Rettore e programma</h3>
-            <p class="pillar-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              </svg><a href="https://www.instagram.com/reel/DZHXhGlIYNU/" target="_blank" rel="noopener">Guarda il video →</a></p>
+            </article>
+          </div>
+        </div>
+        <div class="vgroup reveal">
+          <div class="vgroup__head">
+            <h3>Territorio e città</h3>
+            <p>Urbino come campus: l'Università dentro la città, non accanto.</p>
+          </div>
+          <div class="pillars">
+            <article class="pillar">
+              <h4>Urbino Città Campus UNESCO</h4>
+              <p class="pillar-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="2" aria-hidden="true">
                 <rect x="2" y="2" width="20" height="20" rx="5" />
                 <circle cx="12" cy="12" r="4" />
                 <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-              </svg><a href="https://www.instagram.com/reel/DZrZbnTIuYR/?igsh=bHdjcHoyMWxsY2Jm" target="_blank"
-                rel="noopener">Apri il reel
-                →</a></p>
-          </article>
-          <article class="pillar reveal">
-            <span class="pillar__n">08</span>
-            <h3>Reclutamento e avanzamenti di carriera</h3>
-            <p class="pillar-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              </svg><a href="https://www.instagram.com/reel/DZRtJIHoQf5/" target="_blank" rel="noopener">Guarda il video →</a></p>
+            </article>
+            <article class="pillar">
+              <h4>Città, università e attività culturali</h4>
+              <p class="pillar-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="2" aria-hidden="true">
                 <rect x="2" y="2" width="20" height="20" rx="5" />
                 <circle cx="12" cy="12" r="4" />
                 <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-              </svg><a href="https://www.instagram.com/marcorocchiuniurb/reel/DZo79dfoRf1/" target="_blank"
-                rel="noopener">Apri il reel
-                →</a></p>
-          </article>
-          <article class="pillar reveal">
-            <span class="pillar__n">07</span>
-            <h3>Città, università e attività culturali</h3>
-            <p class="pillar-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              </svg><a href="https://www.instagram.com/reel/DZmnfWEIOxx/" target="_blank" rel="noopener">Guarda il video →</a></p>
+            </article>
+            <article class="pillar">
+              <h4>Università e Città: guardiamo insieme al futuro di Urbino</h4>
+              <p class="pillar-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="2" aria-hidden="true">
                 <rect x="2" y="2" width="20" height="20" rx="5" />
                 <circle cx="12" cy="12" r="4" />
                 <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-              </svg><a href="https://www.instagram.com/reel/DZmnfWEIOxx/?igsh=NmtvNHAwYmo4bzE4" target="_blank"
-                rel="noopener">Apri il reel
-                →</a></p>
-          </article>
-          <article class="pillar reveal">
-            <span class="pillar__n">06</span>
-            <h3>UniUrb modello di adeguatezza sociale</h3>
-            <p class="pillar-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              </svg><a href="https://www.instagram.com/reel/DdLk0Leoo1J/" target="_blank" rel="noopener">Guarda il video →</a></p>
+            </article>
+            <article class="pillar">
+              <h4>UniUrb modello di adeguatezza sociale</h4>
+              <p class="pillar-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="2" aria-hidden="true">
                 <rect x="2" y="2" width="20" height="20" rx="5" />
                 <circle cx="12" cy="12" r="4" />
                 <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-              </svg><a href="https://www.instagram.com/reel/DZZZvV7odTp/?igsh=eHdldG1weGVqbjZ4" target="_blank"
-                rel="noopener">Apri il reel
-                →</a></p>
-          </article>
-          <article class="pillar reveal">
-            <span class="pillar__n">05</span>
-            <h3>Governance</h3>
-            <p class="pillar-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              </svg><a href="https://www.instagram.com/reel/DZZZvV7odTp/" target="_blank" rel="noopener">Guarda il video →</a></p>
+            </article>
+          </div>
+        </div>
+        <div class="vgroup reveal">
+          <div class="vgroup__head">
+            <h3>Comunicazione</h3>
+            <p>Far conoscere ciò che l'Ateneo già fa bene.</p>
+          </div>
+          <div class="pillars">
+            <article class="pillar">
+              <h4>Comunicare e valorizzare i successi</h4>
+              <p class="pillar-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="2" aria-hidden="true">
                 <rect x="2" y="2" width="20" height="20" rx="5" />
                 <circle cx="12" cy="12" r="4" />
                 <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-              </svg><a href="https://www.instagram.com/marcorocchiuniurb/reel/DZUZN-Ro2c0/" target="_blank"
-                rel="noopener">Apri il reel
-                →</a></p>
-          </article>
-          <article class="pillar reveal">
-            <span class="pillar__n">04</span>
-            <h3>Urbino Citta Campus UNESCO</h3>
-            <p class="pillar-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              </svg><a href="https://www.instagram.com/reel/DZzVLxso_qJ/" target="_blank" rel="noopener">Guarda il video →</a></p>
+            </article>
+            <article class="pillar">
+              <h4>Comunicazione e visibilità territoriale</h4>
+              <p class="pillar-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="2" aria-hidden="true">
                 <rect x="2" y="2" width="20" height="20" rx="5" />
                 <circle cx="12" cy="12" r="4" />
                 <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-              </svg><a href="https://www.instagram.com/marcorocchiuniurb/reel/DZRtJIHoQf5/" target="_blank"
-                rel="noopener">Apri il reel
-                →</a></p>
-          </article>
-          <article class="pillar reveal">
-            <span class="pillar__n">03</span>
-            <h3>Studenti a UniUrb</h3>
-            <p class="pillar-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              </svg><a href="https://www.instagram.com/reel/DZ1tGU0om9C/" target="_blank" rel="noopener">Guarda il video →</a></p>
+            </article>
+            <article class="pillar">
+              <h4>Sito web UniUrb</h4>
+              <p class="pillar-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="2" aria-hidden="true">
                 <rect x="2" y="2" width="20" height="20" rx="5" />
                 <circle cx="12" cy="12" r="4" />
                 <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-              </svg><a href="https://www.instagram.com/marcorocchiuniurb/reel/DZNDQrgIIqh/" target="_blank"
-                rel="noopener">Apri il reel
-                →</a></p>
-          </article>
-          <article class="pillar reveal">
-            <span class="pillar__n">02</span>
-            <h3>Il patto per UniUrb</h3>
-            <p class="pillar-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              </svg><a href="https://www.instagram.com/reel/DacRtGKIvbv/" target="_blank" rel="noopener">Guarda il video →</a></p>
+            </article>
+            <article class="pillar">
+              <h4>Orizzonti per UniUrb</h4>
+              <p class="pillar-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="2" aria-hidden="true">
                 <rect x="2" y="2" width="20" height="20" rx="5" />
                 <circle cx="12" cy="12" r="4" />
                 <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-              </svg><a href="https://www.instagram.com/marcorocchiuniurb/reel/DZJ9C-9oTlk/" target="_blank"
-                rel="noopener">Apri il reel
-                →</a></p>
-          </article>
-          <article class="pillar reveal">
-            <span class="pillar__n">01</span>
-            <h3>Pillole per UniUrb</h3>
-            <p class="pillar-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              </svg><a href="https://www.instagram.com/reel/DZ7VknBoJZm/" target="_blank" rel="noopener">Guarda il video →</a></p>
+            </article>
+          </div>
+        </div>
+        <div class="vgroup reveal">
+          <div class="vgroup__head">
+            <h3>Speciali</h3>
+          </div>
+          <div class="pillars">
+            <article class="pillar">
+              <h4>Carlo Bo, 25 anni dopo</h4>
+              <p class="pillar-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="2" aria-hidden="true">
                 <rect x="2" y="2" width="20" height="20" rx="5" />
                 <circle cx="12" cy="12" r="4" />
                 <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-              </svg><a href="https://www.instagram.com/marcorocchiuniurb/reel/DZHXhGlIYNU/" target="_blank"
-                rel="noopener">Apri il reel
-                →</a></p>
-          </article>
+              </svg><a href="https://www.instagram.com/reel/DbC4BQZo4dT/" target="_blank" rel="noopener">Guarda il video →</a></p>
+            </article>
+            <article class="pillar">
+              <h4>Un caffè virtuale con Marco Rocchi</h4>
+              <p class="pillar-ig"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+              </svg><a href="https://www.instagram.com/reel/Dc0QcuHICHz/" target="_blank" rel="noopener">Guarda il video →</a></p>
+            </article>
+          </div>
         </div>
       </div>
     </section>
@@ -1876,6 +1958,13 @@
           <h2>Fuori dall'aula</h2>
         </div>
         <ul class="press-list reveal">
+          <li><a href="https://www.ilrestodelcarlino.it/pesaro/cronaca/elezioni-rettore-urbino-ballottaggio-e402d2a9"
+              target="_blank" rel="noopener">Elezioni del rettore a Urbino: testa a testa. Sarà ballottaggio tra
+              Boccia Artieri e Rocchi<span class="src">Il Resto del Carlino — 2 ottobre 2026</span></a></li>
+          <li><a href="https://www.instagram.com/reel/Dcx2tL0ofIz/" target="_blank" rel="noopener">Intervista a
+              TeleRomagna — seconda parte<span class="src">TeleRomagna — video su Instagram</span></a></li>
+          <li><a href="https://www.instagram.com/reel/DcsuWkwoYvQ/" target="_blank" rel="noopener">Intervista a
+              TeleRomagna — prima parte<span class="src">TeleRomagna — video su Instagram</span></a></li>
           <li><a href="https://www.youtube.com/watch?v=SqeP5WsYeWw" target="_blank" rel="noopener">Urbino pianifica il futuro della città con i tre candidati al rettorato dell'Università<span
                 class="src">Rossini TV — 14 settembre 2026</span></a></li>
           <li><a href="https://youtu.be/obk2lWYKbxU?si=_8ru-qVTICDyB_aP&t=360" target="_blank" rel="noopener">PUG:
@@ -1956,6 +2045,7 @@
       <div class="wrap contact-grid">
         <div class="reveal">
           <span class="kicker">Contatti</span>
+          <h2>Restiamo in contatto</h2>
           <!--<h2>Scrivi al prof. Marco Rocchi</h2>
           <a class="mailto" href="mailto:INDIRIZZO@DOMINIO.it">INDIRIZZO@DOMINIO.it</a>-->
           <div class="socials">
