@@ -842,6 +842,20 @@
       cursor: default
     }
 
+    /* ringraziamento ai caffè virtuali */
+    .thanks {
+      text-align: center;
+      padding-block: clamp(1.4rem, 4vw, 2.2rem);
+      border-block: 1px solid var(--line)
+    }
+
+    .thanks p {
+      margin: 0;
+      font-style: italic;
+      color: var(--muted);
+      font-size: 1.1rem
+    }
+
     /* press */
     .press-list {
       list-style: none;
@@ -1578,6 +1592,12 @@
       </div>
     </section>
 
+    <aside class="thanks reveal" aria-label="Ringraziamento">
+      <div class="wrap">
+        <p>Grazie a chi ha partecipato ai caffè virtuali</p>
+      </div>
+    </aside>
+
     <section class="section" id="materiali">
       <div class="wrap">
         <div class="section__head reveal">
@@ -1827,7 +1847,6 @@
         <div class="vgroup reveal">
           <div class="vgroup__head">
             <h3>Speciali</h3>
-            <p>Grazie a chi ha partecipato ai caffè virtuali</p>
           </div>
           <div class="pillars">
             <article class="pillar">
