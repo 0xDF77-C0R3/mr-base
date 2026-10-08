@@ -1,2 +1,0 @@
-Resume with -c (or command below):
-claude --resume dfb40c55-031e-4535-8128-7c04d59a8284
