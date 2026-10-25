@@ -1,14 +1,15 @@
 # marco-rocchi.it
 
-Sito di Marco Rocchi, Rettore eletto dell'Università di Urbino Carlo Bo per il sessennio 2026-2032.
-Nato come sito della campagna elettorale, oggi è una pagina unica.
+Sito di Marco Rocchi, Rettore dell'Università di Urbino Carlo Bo per il sessennio 2026-2032.
+Nato come sito della campagna elettorale, reindirizza ora verso la pagina istituzionale ufficiale su UniUrb (`https://www.uniurb.it/persone/marco-rocchi`).
 
 ## Struttura
 
-- `index.html` — la pagina, HTML e CSS in un solo file, senza dipendenze di build
+- `index.html` — pagina di reindirizzamento (meta refresh + JavaScript + fallback link)
+- `404.html` — gestore delle pagine non trovate su GitHub Pages, con reindirizzamento identico
 - `Programma-*.pdf` — il programma elettorale, versione completa e sintesi
 - `gource-*.mp4` — la storia del repository in video (orizzontale e verticale)
-- `Materiali-e-bozze/` — sorgenti delle immagini e bozze, non linkati dal sito
+- `Materiali-e-bozze/` — sorgenti delle immagini e bozze storiche
 
 ## Pubblicazione
 
